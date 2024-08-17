@@ -14,6 +14,8 @@
 		B52050CE2B95B1E20006E63E /* PersistentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050CD2B95B1E20006E63E /* PersistentManager.swift */; };
 		B52050D02B95B2C80006E63E /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050CF2B95B2C80006E63E /* PersonListViewController.swift */; };
 		B52050E62B96CCB80006E63E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52050E52B96CCB80006E63E /* LaunchScreen.storyboard */; };
+		B56632972C707FAD00AD85A1 /* PersonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56632962C707FAD00AD85A1 /* PersonListView.swift */; };
+		B56632992C70805F00AD85A1 /* PersonListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56632982C70805F00AD85A1 /* PersonListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		B52050CD2B95B1E20006E63E /* PersistentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentManager.swift; sourceTree = "<group>"; };
 		B52050CF2B95B2C80006E63E /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
 		B52050E52B96CCB80006E63E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B56632962C707FAD00AD85A1 /* PersonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListView.swift; sourceTree = "<group>"; };
+		B56632982C70805F00AD85A1 /* PersonListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +85,7 @@
 		B52050D22B95B2E80006E63E /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				B52050CF2B95B2C80006E63E /* PersonListViewController.swift */,
+				B56632952C707F9900AD85A1 /* PersonListScene */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -92,6 +96,32 @@
 				B52050E52B96CCB80006E63E /* LaunchScreen.storyboard */,
 			);
 			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		B56632952C707F9900AD85A1 /* PersonListScene */ = {
+			isa = PBXGroup;
+			children = (
+				B566329A2C70807400AD85A1 /* View */,
+				B566329B2C70807A00AD85A1 /* Controller */,
+			);
+			path = PersonListScene;
+			sourceTree = "<group>";
+		};
+		B566329A2C70807400AD85A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B56632962C707FAD00AD85A1 /* PersonListView.swift */,
+				B56632982C70805F00AD85A1 /* PersonListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B566329B2C70807A00AD85A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B52050CF2B95B2C80006E63E /* PersonListViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,7 +198,9 @@
 				B52050B72B95A9DD0006E63E /* AppDelegate.swift in Sources */,
 				B52050D02B95B2C80006E63E /* PersonListViewController.swift in Sources */,
 				B52050CC2B95ADC40006E63E /* Person.xcdatamodeld in Sources */,
+				B56632992C70805F00AD85A1 /* PersonListCell.swift in Sources */,
 				B52050B92B95A9DD0006E63E /* SceneDelegate.swift in Sources */,
+				B56632972C707FAD00AD85A1 /* PersonListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
