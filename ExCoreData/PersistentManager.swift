@@ -39,7 +39,7 @@ final class PersistentManager: ObservableObject {
     }
     
     func fetchPerson() -> [Person] {
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: PersistentString.personEntity)
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: PersistentString.person)
         
         let fetchResult = try! context.fetch(fetchRequest)
         
@@ -52,11 +52,9 @@ final class PersistentManager: ObservableObject {
 
 fileprivate enum PersistentString {
     static let container: String = "Person"
-    static let personEntity: String = "PersonEntity"
+    static let person: String = "Person"
 }
 
 fileprivate enum PersonEntityType {
     static let name: String = "name"
-    static let age: String = "age"
-    static let job: String = "job"
 }
