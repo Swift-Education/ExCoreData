@@ -14,7 +14,6 @@
 		B52050CC2B95ADC40006E63E /* Person.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B52050CA2B95ADC40006E63E /* Person.xcdatamodeld */; };
 		B52050CE2B95B1E20006E63E /* PersistentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050CD2B95B1E20006E63E /* PersistentManager.swift */; };
 		B52050D02B95B2C80006E63E /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050CF2B95B2C80006E63E /* PersonListViewController.swift */; };
-		B52050D42B95B4FE0006E63E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050D32B95B4FE0006E63E /* Person.swift */; };
 		B52050E62B96CCB80006E63E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52050E52B96CCB80006E63E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		B52050CB2B95ADC40006E63E /* Name.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Name.xcdatamodel; sourceTree = "<group>"; };
 		B52050CD2B95B1E20006E63E /* PersistentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentManager.swift; sourceTree = "<group>"; };
 		B52050CF2B95B2C80006E63E /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
-		B52050D32B95B4FE0006E63E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		B52050E52B96CCB80006E63E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +85,6 @@
 			children = (
 				B52050BA2B95A9DD0006E63E /* ViewController.swift */,
 				B52050CF2B95B2C80006E63E /* PersonListViewController.swift */,
-				B52050D32B95B4FE0006E63E /* Person.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -174,7 +171,6 @@
 				B52050CE2B95B1E20006E63E /* PersistentManager.swift in Sources */,
 				B52050B72B95A9DD0006E63E /* AppDelegate.swift in Sources */,
 				B52050D02B95B2C80006E63E /* PersonListViewController.swift in Sources */,
-				B52050D42B95B4FE0006E63E /* Person.swift in Sources */,
 				B52050CC2B95ADC40006E63E /* Person.xcdatamodeld in Sources */,
 				B52050B92B95A9DD0006E63E /* SceneDelegate.swift in Sources */,
 			);
