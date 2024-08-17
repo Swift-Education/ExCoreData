@@ -16,7 +16,6 @@
 		B52050D02B95B2C80006E63E /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050CF2B95B2C80006E63E /* PersonListViewController.swift */; };
 		B52050D42B95B4FE0006E63E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050D32B95B4FE0006E63E /* Person.swift */; };
 		B52050E62B96CCB80006E63E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52050E52B96CCB80006E63E /* LaunchScreen.storyboard */; };
-		B52050EA2B96CD9B0006E63E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52050E72B96CCD30006E63E /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		B52050CF2B95B2C80006E63E /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
 		B52050D32B95B4FE0006E63E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		B52050E52B96CCB80006E63E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B52050E72B96CCD30006E63E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +95,6 @@
 		B52050E92B96CD140006E63E /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				B52050E72B96CCD30006E63E /* Main.storyboard */,
 				B52050E52B96CCB80006E63E /* LaunchScreen.storyboard */,
 			);
 			path = Base.lproj;
@@ -161,7 +158,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B52050EA2B96CD9B0006E63E /* Main.storyboard in Resources */,
 				B52050E62B96CCB80006E63E /* LaunchScreen.storyboard in Resources */,
 				B52050C02B95A9DE0006E63E /* Assets.xcassets in Resources */,
 			);
@@ -319,7 +315,6 @@
 				INFOPLIST_FILE = ExCoreData/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -350,7 +345,6 @@
 				INFOPLIST_FILE = ExCoreData/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
