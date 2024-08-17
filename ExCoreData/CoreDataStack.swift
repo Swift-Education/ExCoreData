@@ -1,5 +1,5 @@
 //
-//  PersistentManager.swift
+//  CoreDataStack.swift
 //  ExCoreData
 //
 //  Created by 강동영 on 3/4/24.
@@ -8,8 +8,8 @@
 import CoreData
 import Foundation
 
-final class PersistentManager: ObservableObject {
-    static let shared: PersistentManager = PersistentManager()
+final class CoreDataStack: ObservableObject {
+    static let shared: CoreDataStack = CoreDataStack()
     
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: PersistentString.container)
@@ -44,7 +44,7 @@ final class PersistentManager: ObservableObject {
         let fetchResult = try! context.fetch(fetchRequest)
         
         fetchResult.forEach {
-            $0.value(forKey: PersonEntityType.name) as? String
+            print($0.value(forKey: PersonEntityType.name) as? String)
         }
         return []
     }
