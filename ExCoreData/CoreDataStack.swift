@@ -8,49 +8,50 @@
 import CoreData
 import Foundation
 
-final class CoreDataStack: ObservableObject {
-    static let shared: CoreDataStack = CoreDataStack()
+final class CoreDataStack: ObservableObject, CoreDataManageable {
+    private let persistentContainer: NSPersistentContainer
     
-    lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: PersistentString.container)
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+    init(name: String) {
+        persistentContainer = NSPersistentContainer(name: name)
+        persistentContainer.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
-        return container
-    }()
+    }
     
     var context: NSManagedObjectContext {
-        return self.persistentContainer.viewContext
+        return persistentContainer.viewContext
+    }
+    
+    func create(with model: PersonDTO) {
+        let newPerson = model.toEntity(context: context)
+        newPerson.name = model.name
+        saveContext()
+    }
+    
+    func fetch() -> [Person] {
+        let request: NSFetchRequest<Person> = Person.fetchRequest()
+        return (try? context.fetch(request)) ?? []
     }
 
-    private func saveContext() {
-        let context = persistentContainer.viewContext
+    func delete(_ entity: Person) {
+        context.delete(entity)
+        saveContext()
+    }
+
+    func saveContext() {
         if context.hasChanges {
             do {
                 try context.save()
             } catch {
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                print("Error saving context: \(error.localizedDescription)")
             }
-            
         }
-    }
-    
-    func fetchPerson() -> [Person] {
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: PersistentString.person)
-        
-        let fetchResult = try! context.fetch(fetchRequest)
-        
-        fetchResult.forEach {
-            print($0.value(forKey: PersonEntityType.name) as? String)
-        }
-        return []
     }
 }
 
-fileprivate enum PersistentString {
+enum PersistentString {
     static let container: String = "Person"
     static let person: String = "Person"
 }

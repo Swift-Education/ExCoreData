@@ -10,9 +10,8 @@ import CoreData
 
 final class PersonListViewController: UIViewController {
     private let rootview: PersonListView
-    var people: [NSManagedObject] = []
-    
-    
+    var peoples: [Person] = []
+    private let persistance: CoreDataStack = .init(name: PersistentString.container)
     init(rootview: PersonListView) {
         self.rootview = rootview
         super.init(nibName: nil, bundle: nil)
@@ -33,6 +32,13 @@ final class PersonListViewController: UIViewController {
         self.title = "New List"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .add, primaryAction: action())
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        refresh()
+        
     }
     
     func action() -> UIAction {
@@ -41,10 +47,16 @@ final class PersonListViewController: UIViewController {
         })
     }
     
+    private func refresh() {
+        let names = persistance.fetch()
+        print("count: \(names.count)")
+    }
     private func createAlert() -> UIAlertController {
         let alert = UIAlertController(title: "이름 입력", message: "이름을 입력하세요", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: .default) { _ in
-            print(alert.textFields?.first?.text)
+            guard let name = alert.textFields?.first?.text else { return }
+            self.persistance.create(with: PersonDTO(name: name))
+            self.refresh()
         }
         let cancelAction = UIAlertAction(title: "취소", style: .cancel)
         alert.addTextField()

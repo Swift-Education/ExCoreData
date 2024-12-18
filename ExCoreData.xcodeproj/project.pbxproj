@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B51268402D12EF3500F4990D /* CoreDataManageable+EntityTransformAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = B512683F2D12EF3500F4990D /* CoreDataManageable+EntityTransformAble.swift */; };
+		B51268A12D12F18D00F4990D /* PersonDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51268A02D12F18900F4990D /* PersonDTO.swift */; };
 		B52050B72B95A9DD0006E63E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050B62B95A9DD0006E63E /* AppDelegate.swift */; };
 		B52050B92B95A9DD0006E63E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050B82B95A9DD0006E63E /* SceneDelegate.swift */; };
 		B52050C02B95A9DE0006E63E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B52050BF2B95A9DE0006E63E /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B512683F2D12EF3500F4990D /* CoreDataManageable+EntityTransformAble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManageable+EntityTransformAble.swift"; sourceTree = "<group>"; };
+		B51268A02D12F18900F4990D /* PersonDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDTO.swift; sourceTree = "<group>"; };
 		B52050B32B95A9DD0006E63E /* ExCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52050B62B95A9DD0006E63E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B52050B82B95A9DD0006E63E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +72,9 @@
 				B52050E92B96CD140006E63E /* Base.lproj */,
 				B52050C42B95A9DE0006E63E /* Info.plist */,
 				B52050CA2B95ADC40006E63E /* Person.xcdatamodeld */,
+				B51268A02D12F18900F4990D /* PersonDTO.swift */,
 				B52050CD2B95B1E20006E63E /* CoreDataStack.swift */,
+				B512683F2D12EF3500F4990D /* CoreDataManageable+EntityTransformAble.swift */,
 			);
 			path = ExCoreData;
 			sourceTree = "<group>";
@@ -198,9 +204,11 @@
 				B52050B72B95A9DD0006E63E /* AppDelegate.swift in Sources */,
 				B52050D02B95B2C80006E63E /* PersonListViewController.swift in Sources */,
 				B52050CC2B95ADC40006E63E /* Person.xcdatamodeld in Sources */,
+				B51268A12D12F18D00F4990D /* PersonDTO.swift in Sources */,
 				B56632992C70805F00AD85A1 /* PersonListCell.swift in Sources */,
 				B52050B92B95A9DD0006E63E /* SceneDelegate.swift in Sources */,
 				B56632972C707FAD00AD85A1 /* PersonListView.swift in Sources */,
+				B51268402D12EF3500F4990D /* CoreDataManageable+EntityTransformAble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
